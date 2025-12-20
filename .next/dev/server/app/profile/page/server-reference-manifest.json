@@ -1,0 +1,65 @@
+{
+  "node": {
+    "0044a30ae8491bb728c8f656bf10fcbbf971e0afc5": {
+      "workers": {
+        "app/profile/page": {
+          "moduleId": "[project]/.next-internal/server/app/profile/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "app/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/profile/page": "rsc"
+      },
+      "exportedName": "signOut",
+      "filename": "app/actions/auth.ts"
+    },
+    "00a5cca465185c46fe6f41459b63d52282a26df8d8": {
+      "workers": {
+        "app/profile/page": {
+          "moduleId": "[project]/.next-internal/server/app/profile/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getCurrentUser",
+          "filename": "app/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/profile/page": "rsc"
+      },
+      "exportedName": "getCurrentUser",
+      "filename": "app/actions/auth.ts"
+    },
+    "604ee91a7414b788c9d4d79a3b01a27fe1f9906645": {
+      "workers": {
+        "app/profile/page": {
+          "moduleId": "[project]/.next-internal/server/app/profile/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "app/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/profile/page": "rsc"
+      },
+      "exportedName": "signUp",
+      "filename": "app/actions/auth.ts"
+    },
+    "609c0bfc21541e295b494afee4c0911da9f585e8e4": {
+      "workers": {
+        "app/profile/page": {
+          "moduleId": "[project]/.next-internal/server/app/profile/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "app/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/profile/page": "rsc"
+      },
+      "exportedName": "signIn",
+      "filename": "app/actions/auth.ts"
+    }
+  },
+  "edge": {}
+}

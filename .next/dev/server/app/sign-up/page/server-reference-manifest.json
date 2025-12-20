@@ -1,0 +1,20 @@
+{
+  "node": {
+    "604ee91a7414b788c9d4d79a3b01a27fe1f9906645": {
+      "workers": {
+        "app/sign-up/page": {
+          "moduleId": "[project]/.next-internal/server/app/sign-up/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "app/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/sign-up/page": "action-browser"
+      },
+      "exportedName": "signUp",
+      "filename": "app/actions/auth.ts"
+    }
+  },
+  "edge": {}
+}
