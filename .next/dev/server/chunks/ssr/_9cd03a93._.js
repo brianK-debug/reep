@@ -182,6 +182,7 @@ async function signIn(prevState, formData) {
             error: "Email and password are required"
         };
     }
+    let user = null;
     try {
         const result = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"]`
       SELECT id, email, password_hash, full_name, role, avatar_url, points, level
@@ -193,7 +194,7 @@ async function signIn(prevState, formData) {
                 error: "Invalid email or password"
             };
         }
-        const user = result[0];
+        user = result[0];
         const isValid = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$auth$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["verifyPassword"])(password, user.password_hash);
         if (!isValid) {
             return {
@@ -202,19 +203,19 @@ async function signIn(prevState, formData) {
         }
         const { password_hash, ...userWithoutPassword } = user;
         await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$auth$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["setSession"])(userWithoutPassword);
-        // Redirect based on user role
-        if (user.role === "admin") {
-            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$components$2f$navigation$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["redirect"])("/admin");
-        } else if (user.role === "teacher") {
-            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$components$2f$navigation$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["redirect"])("/tutor");
-        } else {
-            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$components$2f$navigation$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["redirect"])("/dashboard");
-        }
     } catch (error) {
         console.error("[v0] Sign in error:", error);
         return {
             error: "Failed to sign in. Please try again."
         };
+    }
+    // Redirect based on user role
+    if (user.role === "admin") {
+        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$components$2f$navigation$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["redirect"])("/admin");
+    } else if (user.role === "teacher") {
+        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$components$2f$navigation$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["redirect"])("/tutor");
+    } else {
+        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$components$2f$navigation$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["redirect"])("/dashboard");
     }
 }
 async function signOut() {

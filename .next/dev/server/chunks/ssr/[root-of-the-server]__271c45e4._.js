@@ -166,13 +166,15 @@ async function signUp(prevState, formData) {
     `;
         const user = result[0];
         await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$auth$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["setSession"])(user);
+        return {
+            success: "Account created successfully! Welcome to REEP."
+        };
     } catch (error) {
         console.error("[v0] Sign up error:", error);
         return {
             error: "Failed to create account. Please try again."
         };
     }
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$components$2f$navigation$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["redirect"])("/dashboard");
 }
 async function signIn(prevState, formData) {
     const email = formData.get("email");
@@ -182,6 +184,7 @@ async function signIn(prevState, formData) {
             error: "Email and password are required"
         };
     }
+    let user = null;
     try {
         const result = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"]`
       SELECT id, email, password_hash, full_name, role, avatar_url, points, level
@@ -193,7 +196,7 @@ async function signIn(prevState, formData) {
                 error: "Invalid email or password"
             };
         }
-        const user = result[0];
+        user = result[0];
         const isValid = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$auth$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["verifyPassword"])(password, user.password_hash);
         if (!isValid) {
             return {
@@ -202,14 +205,10 @@ async function signIn(prevState, formData) {
         }
         const { password_hash, ...userWithoutPassword } = user;
         await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$auth$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["setSession"])(userWithoutPassword);
-        // Redirect based on user role
-        if (user.role === "admin") {
-            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$components$2f$navigation$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["redirect"])("/admin");
-        } else if (user.role === "teacher") {
-            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$components$2f$navigation$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["redirect"])("/tutor");
-        } else {
-            (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$components$2f$navigation$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["redirect"])("/dashboard");
-        }
+        return {
+            success: "Signed in successfully! Redirecting...",
+            role: user.role
+        };
     } catch (error) {
         console.error("[v0] Sign in error:", error);
         return {
@@ -848,11 +847,19 @@ async function completeLesson(formData) {
         `;
             }
         }
+        // Check if module is completed
+        const moduleCompletion = await checkModuleCompletion(userId, lessonId);
         // Update course progress
         await updateCourseProgress(userId, courseId);
         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$cache$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["revalidatePath"])(`/courses/${courseId}/lessons/${lessonId}`);
+        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$cache$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["revalidatePath"])(`/courses/${courseId}`);
+        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$cache$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["revalidatePath"])("/dashboard");
         return {
-            success: true
+            success: true,
+            pointsEarned: pointsReward,
+            moduleCompleted: moduleCompletion.completed,
+            moduleTitle: moduleCompletion.title,
+            modulePoints: moduleCompletion.points
         };
     } catch (error) {
         console.error("[v0] Complete lesson error:", error);
@@ -1051,6 +1058,62 @@ async function updateCourseProgress(userId, courseId) {
             }
         }
     }
+}
+// Helper function to check if module is completed
+async function checkModuleCompletion(userId, lessonId) {
+    // Get the module for this lesson
+    const lessonData = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"]`
+    SELECT m.id, m.title
+    FROM lessons l
+    JOIN modules m ON l.module_id = m.id
+    WHERE l.id = ${lessonId}
+  `;
+    if (lessonData.length === 0) return {
+        completed: false
+    };
+    const moduleId = lessonData[0].id;
+    const moduleTitle = lessonData[0].title;
+    // Get total lessons in module
+    const totalLessons = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"]`
+    SELECT COUNT(*) as count FROM lessons WHERE module_id = ${moduleId}
+  `;
+    // Get completed lessons in module
+    const completedLessons = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"]`
+    SELECT COUNT(*) as count
+    FROM lesson_progress lp
+    JOIN lessons l ON lp.lesson_id = l.id
+    WHERE lp.user_id = ${userId}
+      AND l.module_id = ${moduleId}
+      AND lp.completed = true
+  `;
+    const total = totalLessons[0].count;
+    const completed = completedLessons[0].count;
+    if (completed === total) {
+        // Module completed! Award points and create achievement
+        const modulePoints = 15 // Fixed points for module completion
+        ;
+        await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"]`
+      UPDATE users SET points = points + ${modulePoints} WHERE id = ${userId}
+    `;
+        await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"]`
+      INSERT INTO achievements (user_id, type, title, description, points_earned)
+      VALUES (
+        ${userId},
+        'module_completed',
+        'Module Master',
+        'Completed module: ${moduleTitle}',
+        ${modulePoints}
+      )
+    `;
+        return {
+            completed: true,
+            title: moduleTitle,
+            points: modulePoints
+        };
+    }
+    return {
+        completed: false
+    };
 }
 // Helper function to update user level based on points
 async function updateUserLevel(userId) {

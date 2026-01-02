@@ -2,6 +2,30 @@
   "node": {
     "0044a30ae8491bb728c8f656bf10fcbbf971e0afc5": {
       "workers": {
+        "app/admin/analytics/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/analytics/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "app/actions/auth.ts"
+        },
+        "app/admin/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "app/actions/auth.ts"
+        },
+        "app/challenges/page": {
+          "moduleId": "[project]/.next-internal/server/app/challenges/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "app/actions/auth.ts"
+        },
+        "app/courses/[courseId]/lessons/[lessonId]/page": {
+          "moduleId": "[project]/.next-internal/server/app/courses/[courseId]/lessons/[lessonId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/courses.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "app/actions/auth.ts"
+        },
         "app/courses/[courseId]/page": {
           "moduleId": "[project]/.next-internal/server/app/courses/[courseId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/courses.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
@@ -13,17 +37,94 @@
           "async": false,
           "exportedName": "signOut",
           "filename": "app/actions/auth.ts"
+        },
+        "app/leaderboard/page": {
+          "moduleId": "[project]/.next-internal/server/app/leaderboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "app/actions/auth.ts"
+        },
+        "app/profile/page": {
+          "moduleId": "[project]/.next-internal/server/app/profile/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "app/actions/auth.ts"
+        },
+        "app/shop/page": {
+          "moduleId": "[project]/.next-internal/server/app/shop/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/shop.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "app/actions/auth.ts"
+        },
+        "app/tutor/courses/[courseId]/edit/page": {
+          "moduleId": "[project]/.next-internal/server/app/tutor/courses/[courseId]/edit/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/courses.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "app/actions/auth.ts"
+        },
+        "app/tutor/courses/[courseId]/page": {
+          "moduleId": "[project]/.next-internal/server/app/tutor/courses/[courseId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "app/actions/auth.ts"
+        },
+        "app/tutor/courses/new/page": {
+          "moduleId": "[project]/.next-internal/server/app/tutor/courses/new/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/courses.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "app/actions/auth.ts"
+        },
+        "app/tutor/page": {
+          "moduleId": "[project]/.next-internal/server/app/tutor/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "app/actions/auth.ts"
         }
       },
       "layer": {
+        "app/admin/analytics/page": "rsc",
+        "app/admin/page": "rsc",
+        "app/challenges/page": "rsc",
+        "app/courses/[courseId]/lessons/[lessonId]/page": "rsc",
         "app/courses/[courseId]/page": "rsc",
-        "app/dashboard/page": "rsc"
+        "app/dashboard/page": "rsc",
+        "app/leaderboard/page": "rsc",
+        "app/profile/page": "rsc",
+        "app/shop/page": "rsc",
+        "app/tutor/courses/[courseId]/edit/page": "rsc",
+        "app/tutor/courses/[courseId]/page": "rsc",
+        "app/tutor/courses/new/page": "rsc",
+        "app/tutor/page": "rsc"
       },
       "filename": "app/actions/auth.ts",
       "exportedName": "signOut"
     },
     "00a5cca465185c46fe6f41459b63d52282a26df8d8": {
       "workers": {
+        "app/admin/analytics/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/analytics/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getCurrentUser",
+          "filename": "app/actions/auth.ts"
+        },
+        "app/admin/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getCurrentUser",
+          "filename": "app/actions/auth.ts"
+        },
+        "app/challenges/page": {
+          "moduleId": "[project]/.next-internal/server/app/challenges/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getCurrentUser",
+          "filename": "app/actions/auth.ts"
+        },
+        "app/courses/[courseId]/lessons/[lessonId]/page": {
+          "moduleId": "[project]/.next-internal/server/app/courses/[courseId]/lessons/[lessonId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/courses.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getCurrentUser",
+          "filename": "app/actions/auth.ts"
+        },
         "app/courses/[courseId]/page": {
           "moduleId": "[project]/.next-internal/server/app/courses/[courseId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/courses.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
@@ -35,17 +136,94 @@
           "async": false,
           "exportedName": "getCurrentUser",
           "filename": "app/actions/auth.ts"
+        },
+        "app/leaderboard/page": {
+          "moduleId": "[project]/.next-internal/server/app/leaderboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getCurrentUser",
+          "filename": "app/actions/auth.ts"
+        },
+        "app/profile/page": {
+          "moduleId": "[project]/.next-internal/server/app/profile/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getCurrentUser",
+          "filename": "app/actions/auth.ts"
+        },
+        "app/shop/page": {
+          "moduleId": "[project]/.next-internal/server/app/shop/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/shop.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getCurrentUser",
+          "filename": "app/actions/auth.ts"
+        },
+        "app/tutor/courses/[courseId]/edit/page": {
+          "moduleId": "[project]/.next-internal/server/app/tutor/courses/[courseId]/edit/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/courses.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getCurrentUser",
+          "filename": "app/actions/auth.ts"
+        },
+        "app/tutor/courses/[courseId]/page": {
+          "moduleId": "[project]/.next-internal/server/app/tutor/courses/[courseId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getCurrentUser",
+          "filename": "app/actions/auth.ts"
+        },
+        "app/tutor/courses/new/page": {
+          "moduleId": "[project]/.next-internal/server/app/tutor/courses/new/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/courses.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getCurrentUser",
+          "filename": "app/actions/auth.ts"
+        },
+        "app/tutor/page": {
+          "moduleId": "[project]/.next-internal/server/app/tutor/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getCurrentUser",
+          "filename": "app/actions/auth.ts"
         }
       },
       "layer": {
+        "app/admin/analytics/page": "rsc",
+        "app/admin/page": "rsc",
+        "app/challenges/page": "rsc",
+        "app/courses/[courseId]/lessons/[lessonId]/page": "rsc",
         "app/courses/[courseId]/page": "rsc",
-        "app/dashboard/page": "rsc"
+        "app/dashboard/page": "rsc",
+        "app/leaderboard/page": "rsc",
+        "app/profile/page": "rsc",
+        "app/shop/page": "rsc",
+        "app/tutor/courses/[courseId]/edit/page": "rsc",
+        "app/tutor/courses/[courseId]/page": "rsc",
+        "app/tutor/courses/new/page": "rsc",
+        "app/tutor/page": "rsc"
       },
       "filename": "app/actions/auth.ts",
       "exportedName": "getCurrentUser"
     },
     "604ee91a7414b788c9d4d79a3b01a27fe1f9906645": {
       "workers": {
+        "app/admin/analytics/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/analytics/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "app/actions/auth.ts"
+        },
+        "app/admin/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "app/actions/auth.ts"
+        },
+        "app/challenges/page": {
+          "moduleId": "[project]/.next-internal/server/app/challenges/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "app/actions/auth.ts"
+        },
+        "app/courses/[courseId]/lessons/[lessonId]/page": {
+          "moduleId": "[project]/.next-internal/server/app/courses/[courseId]/lessons/[lessonId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/courses.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "app/actions/auth.ts"
+        },
         "app/courses/[courseId]/page": {
           "moduleId": "[project]/.next-internal/server/app/courses/[courseId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/courses.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
@@ -57,17 +235,101 @@
           "async": false,
           "exportedName": "signUp",
           "filename": "app/actions/auth.ts"
+        },
+        "app/leaderboard/page": {
+          "moduleId": "[project]/.next-internal/server/app/leaderboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "app/actions/auth.ts"
+        },
+        "app/profile/page": {
+          "moduleId": "[project]/.next-internal/server/app/profile/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "app/actions/auth.ts"
+        },
+        "app/shop/page": {
+          "moduleId": "[project]/.next-internal/server/app/shop/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/shop.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "app/actions/auth.ts"
+        },
+        "app/sign-up/page": {
+          "moduleId": "[project]/.next-internal/server/app/sign-up/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "app/actions/auth.ts"
+        },
+        "app/tutor/courses/[courseId]/edit/page": {
+          "moduleId": "[project]/.next-internal/server/app/tutor/courses/[courseId]/edit/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/courses.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "app/actions/auth.ts"
+        },
+        "app/tutor/courses/[courseId]/page": {
+          "moduleId": "[project]/.next-internal/server/app/tutor/courses/[courseId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "app/actions/auth.ts"
+        },
+        "app/tutor/courses/new/page": {
+          "moduleId": "[project]/.next-internal/server/app/tutor/courses/new/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/courses.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "app/actions/auth.ts"
+        },
+        "app/tutor/page": {
+          "moduleId": "[project]/.next-internal/server/app/tutor/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signUp",
+          "filename": "app/actions/auth.ts"
         }
       },
       "layer": {
+        "app/admin/analytics/page": "rsc",
+        "app/admin/page": "rsc",
+        "app/challenges/page": "rsc",
+        "app/courses/[courseId]/lessons/[lessonId]/page": "rsc",
         "app/courses/[courseId]/page": "rsc",
-        "app/dashboard/page": "rsc"
+        "app/dashboard/page": "rsc",
+        "app/leaderboard/page": "rsc",
+        "app/profile/page": "rsc",
+        "app/shop/page": "rsc",
+        "app/sign-up/page": "action-browser",
+        "app/tutor/courses/[courseId]/edit/page": "rsc",
+        "app/tutor/courses/[courseId]/page": "rsc",
+        "app/tutor/courses/new/page": "rsc",
+        "app/tutor/page": "rsc"
       },
       "filename": "app/actions/auth.ts",
       "exportedName": "signUp"
     },
     "609c0bfc21541e295b494afee4c0911da9f585e8e4": {
       "workers": {
+        "app/admin/analytics/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/analytics/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "app/actions/auth.ts"
+        },
+        "app/admin/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "app/actions/auth.ts"
+        },
+        "app/challenges/page": {
+          "moduleId": "[project]/.next-internal/server/app/challenges/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "app/actions/auth.ts"
+        },
+        "app/courses/[courseId]/lessons/[lessonId]/page": {
+          "moduleId": "[project]/.next-internal/server/app/courses/[courseId]/lessons/[lessonId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/courses.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "app/actions/auth.ts"
+        },
         "app/courses/[courseId]/page": {
           "moduleId": "[project]/.next-internal/server/app/courses/[courseId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/courses.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
@@ -76,6 +338,24 @@
         },
         "app/dashboard/page": {
           "moduleId": "[project]/.next-internal/server/app/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "app/actions/auth.ts"
+        },
+        "app/leaderboard/page": {
+          "moduleId": "[project]/.next-internal/server/app/leaderboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "app/actions/auth.ts"
+        },
+        "app/profile/page": {
+          "moduleId": "[project]/.next-internal/server/app/profile/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "app/actions/auth.ts"
+        },
+        "app/shop/page": {
+          "moduleId": "[project]/.next-internal/server/app/shop/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/shop.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
           "exportedName": "signIn",
           "filename": "app/actions/auth.ts"
@@ -85,45 +365,65 @@
           "async": false,
           "exportedName": "signIn",
           "filename": "app/actions/auth.ts"
+        },
+        "app/tutor/courses/[courseId]/edit/page": {
+          "moduleId": "[project]/.next-internal/server/app/tutor/courses/[courseId]/edit/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/courses.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "app/actions/auth.ts"
+        },
+        "app/tutor/courses/[courseId]/page": {
+          "moduleId": "[project]/.next-internal/server/app/tutor/courses/[courseId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "app/actions/auth.ts"
+        },
+        "app/tutor/courses/new/page": {
+          "moduleId": "[project]/.next-internal/server/app/tutor/courses/new/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/courses.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "app/actions/auth.ts"
+        },
+        "app/tutor/page": {
+          "moduleId": "[project]/.next-internal/server/app/tutor/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signIn",
+          "filename": "app/actions/auth.ts"
         }
       },
       "layer": {
+        "app/admin/analytics/page": "rsc",
+        "app/admin/page": "rsc",
+        "app/challenges/page": "rsc",
+        "app/courses/[courseId]/lessons/[lessonId]/page": "rsc",
         "app/courses/[courseId]/page": "rsc",
         "app/dashboard/page": "rsc",
-        "app/sign-in/page": "action-browser"
+        "app/leaderboard/page": "rsc",
+        "app/profile/page": "rsc",
+        "app/shop/page": "rsc",
+        "app/sign-in/page": "action-browser",
+        "app/tutor/courses/[courseId]/edit/page": "rsc",
+        "app/tutor/courses/[courseId]/page": "rsc",
+        "app/tutor/courses/new/page": "rsc",
+        "app/tutor/page": "rsc"
       },
       "filename": "app/actions/auth.ts",
       "exportedName": "signIn"
     },
-    "40005978500ad6a4948b9b1ae6a3ad2ad1c60a2075": {
+    "4006c25d41693b857b655bba3c839d3ed2d04c257f": {
       "workers": {
-        "app/courses/[courseId]/page": {
-          "moduleId": "[project]/.next-internal/server/app/courses/[courseId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/courses.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+        "app/shop/page": {
+          "moduleId": "[project]/.next-internal/server/app/shop/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/shop.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
           "async": false,
-          "exportedName": "completeLesson",
-          "filename": "app/actions/courses.ts"
+          "exportedName": "purchasePowerUp",
+          "filename": "app/actions/shop.ts"
         }
       },
       "layer": {
-        "app/courses/[courseId]/page": "rsc"
+        "app/shop/page": "action-browser"
       },
-      "filename": "app/actions/courses.ts",
-      "exportedName": "completeLesson"
-    },
-    "40024d419bc900a75cee8a5523b434d9b5604a84aa": {
-      "workers": {
-        "app/courses/[courseId]/page": {
-          "moduleId": "[project]/.next-internal/server/app/courses/[courseId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/courses.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "submitQuiz",
-          "filename": "app/actions/courses.ts"
-        }
-      },
-      "layer": {
-        "app/courses/[courseId]/page": "rsc"
-      },
-      "filename": "app/actions/courses.ts",
-      "exportedName": "submitQuiz"
+      "filename": "app/actions/shop.ts",
+      "exportedName": "purchasePowerUp"
     },
     "404df110a63c4138751c6911c2f29861ce4a6bd62f": {
       "workers": {
@@ -132,13 +432,56 @@
           "async": false,
           "exportedName": "createCourseWithContent",
           "filename": "app/actions/courses.ts"
+        },
+        "app/tutor/courses/[courseId]/edit/page": {
+          "moduleId": "[project]/.next-internal/server/app/tutor/courses/[courseId]/edit/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/courses.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "createCourseWithContent",
+          "filename": "app/actions/courses.ts"
+        },
+        "app/tutor/courses/new/page": {
+          "moduleId": "[project]/.next-internal/server/app/tutor/courses/new/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/courses.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "createCourseWithContent",
+          "filename": "app/actions/courses.ts"
         }
       },
       "layer": {
-        "app/courses/[courseId]/page": "rsc"
+        "app/courses/[courseId]/page": "rsc",
+        "app/tutor/courses/[courseId]/edit/page": "action-browser",
+        "app/tutor/courses/new/page": "action-browser"
       },
       "filename": "app/actions/courses.ts",
       "exportedName": "createCourseWithContent"
+    },
+    "60a9fb9da29c0ce114238b29ff8bb0ebb1bc79f058": {
+      "workers": {
+        "app/courses/[courseId]/page": {
+          "moduleId": "[project]/.next-internal/server/app/courses/[courseId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/courses.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "updateCourse",
+          "filename": "app/actions/courses.ts"
+        },
+        "app/tutor/courses/[courseId]/edit/page": {
+          "moduleId": "[project]/.next-internal/server/app/tutor/courses/[courseId]/edit/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/courses.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "updateCourse",
+          "filename": "app/actions/courses.ts"
+        },
+        "app/tutor/courses/new/page": {
+          "moduleId": "[project]/.next-internal/server/app/tutor/courses/new/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/courses.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "updateCourse",
+          "filename": "app/actions/courses.ts"
+        }
+      },
+      "layer": {
+        "app/courses/[courseId]/page": "rsc",
+        "app/tutor/courses/[courseId]/edit/page": "action-browser",
+        "app/tutor/courses/new/page": "action-browser"
+      },
+      "filename": "app/actions/courses.ts",
+      "exportedName": "updateCourse"
     },
     "407844702eb472feffee580215cc3dc426407b1146": {
       "workers": {
@@ -147,13 +490,71 @@
           "async": false,
           "exportedName": "uploadCourseThumbnail",
           "filename": "app/actions/courses.ts"
+        },
+        "app/tutor/courses/[courseId]/edit/page": {
+          "moduleId": "[project]/.next-internal/server/app/tutor/courses/[courseId]/edit/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/courses.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "uploadCourseThumbnail",
+          "filename": "app/actions/courses.ts"
+        },
+        "app/tutor/courses/new/page": {
+          "moduleId": "[project]/.next-internal/server/app/tutor/courses/new/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/courses.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "uploadCourseThumbnail",
+          "filename": "app/actions/courses.ts"
         }
       },
       "layer": {
-        "app/courses/[courseId]/page": "rsc"
+        "app/courses/[courseId]/page": "rsc",
+        "app/tutor/courses/[courseId]/edit/page": "action-browser",
+        "app/tutor/courses/new/page": "action-browser"
       },
       "filename": "app/actions/courses.ts",
       "exportedName": "uploadCourseThumbnail"
+    },
+    "40005978500ad6a4948b9b1ae6a3ad2ad1c60a2075": {
+      "workers": {
+        "app/courses/[courseId]/lessons/[lessonId]/page": {
+          "moduleId": "[project]/.next-internal/server/app/courses/[courseId]/lessons/[lessonId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/courses.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "completeLesson",
+          "filename": "app/actions/courses.ts"
+        },
+        "app/courses/[courseId]/page": {
+          "moduleId": "[project]/.next-internal/server/app/courses/[courseId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/courses.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "completeLesson",
+          "filename": "app/actions/courses.ts"
+        }
+      },
+      "layer": {
+        "app/courses/[courseId]/lessons/[lessonId]/page": "action-browser",
+        "app/courses/[courseId]/page": "rsc"
+      },
+      "filename": "app/actions/courses.ts",
+      "exportedName": "completeLesson"
+    },
+    "40024d419bc900a75cee8a5523b434d9b5604a84aa": {
+      "workers": {
+        "app/courses/[courseId]/lessons/[lessonId]/page": {
+          "moduleId": "[project]/.next-internal/server/app/courses/[courseId]/lessons/[lessonId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/courses.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "submitQuiz",
+          "filename": "app/actions/courses.ts"
+        },
+        "app/courses/[courseId]/page": {
+          "moduleId": "[project]/.next-internal/server/app/courses/[courseId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/courses.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "submitQuiz",
+          "filename": "app/actions/courses.ts"
+        }
+      },
+      "layer": {
+        "app/courses/[courseId]/lessons/[lessonId]/page": "action-browser",
+        "app/courses/[courseId]/page": "rsc"
+      },
+      "filename": "app/actions/courses.ts",
+      "exportedName": "submitQuiz"
     },
     "409072d17d685db5ee19855f919dd5ed80f35fcc3e": {
       "workers": {
@@ -184,21 +585,6 @@
       },
       "filename": "app/actions/courses.ts",
       "exportedName": "enrollInCourse"
-    },
-    "60a9fb9da29c0ce114238b29ff8bb0ebb1bc79f058": {
-      "workers": {
-        "app/courses/[courseId]/page": {
-          "moduleId": "[project]/.next-internal/server/app/courses/[courseId]/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/actions/auth.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/actions/courses.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false,
-          "exportedName": "updateCourse",
-          "filename": "app/actions/courses.ts"
-        }
-      },
-      "layer": {
-        "app/courses/[courseId]/page": "rsc"
-      },
-      "filename": "app/actions/courses.ts",
-      "exportedName": "updateCourse"
     }
   },
   "edge": {},

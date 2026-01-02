@@ -128,7 +128,8 @@ async function signUp(prevState, formData) {
     const email = formData.get("email");
     const password = formData.get("password");
     const fullName = formData.get("fullName");
-    if (!email || !password || !fullName) {
+    const role = formData.get("role");
+    if (!email || !password || !fullName || !role) {
         return {
             error: "All fields are required"
         };
@@ -136,6 +137,14 @@ async function signUp(prevState, formData) {
     if (password.length < 8) {
         return {
             error: "Password must be at least 8 characters"
+        };
+    }
+    if (![
+        "student",
+        "teacher"
+    ].includes(role)) {
+        return {
+            error: "Invalid role selected"
         };
     }
     try {
@@ -152,18 +161,20 @@ async function signUp(prevState, formData) {
         const passwordHash = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$auth$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["hashPassword"])(password);
         const result = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"]`
       INSERT INTO users (email, password_hash, full_name, role)
-      VALUES (${email}, ${passwordHash}, ${fullName}, 'student')
+      VALUES (${email}, ${passwordHash}, ${fullName}, ${role})
       RETURNING id, email, full_name, role, avatar_url, points, level
     `;
         const user = result[0];
         await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$auth$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["setSession"])(user);
+        return {
+            success: "Account created successfully! Welcome to REEP."
+        };
     } catch (error) {
         console.error("[v0] Sign up error:", error);
         return {
             error: "Failed to create account. Please try again."
         };
     }
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$components$2f$navigation$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["redirect"])("/dashboard");
 }
 async function signIn(prevState, formData) {
     const email = formData.get("email");
@@ -173,6 +184,7 @@ async function signIn(prevState, formData) {
             error: "Email and password are required"
         };
     }
+    let user = null;
     try {
         const result = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"]`
       SELECT id, email, password_hash, full_name, role, avatar_url, points, level
@@ -184,7 +196,7 @@ async function signIn(prevState, formData) {
                 error: "Invalid email or password"
             };
         }
-        const user = result[0];
+        user = result[0];
         const isValid = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$auth$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["verifyPassword"])(password, user.password_hash);
         if (!isValid) {
             return {
@@ -193,13 +205,16 @@ async function signIn(prevState, formData) {
         }
         const { password_hash, ...userWithoutPassword } = user;
         await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$auth$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["setSession"])(userWithoutPassword);
+        return {
+            success: "Signed in successfully! Redirecting...",
+            role: user.role
+        };
     } catch (error) {
         console.error("[v0] Sign in error:", error);
         return {
             error: "Failed to sign in. Please try again."
         };
     }
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$components$2f$navigation$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["redirect"])("/dashboard");
 }
 async function signOut() {
     await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$auth$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["clearSession"])();

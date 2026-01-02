@@ -3,14 +3,14 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
 import Link from "next/link"
-import { BookOpen, Star } from "lucide-react"
+import { BookOpen, Star, Sparkles, Trophy } from "lucide-react"
 import Image from "next/image"
 
 interface Course {
   id: number
   title: string
   description: string
-  thumbnail_url?: string
+  thumbnail_url: string | null
   difficulty: string
   teacher_name: string
   progress?: number
@@ -78,16 +78,36 @@ export function CourseGrid({ courses, enrolled = false }: CourseGridProps) {
             {enrolled && typeof course.progress === "number" && (
               <div className="mb-4">
                 <div className="flex items-center justify-between text-sm mb-2">
-                  <span className="text-muted-foreground">Progress</span>
-                  <span className="font-medium text-foreground">{course.progress}%</span>
+                  <span className="text-muted-foreground flex items-center gap-1">
+                    <Trophy className="w-3 h-3" />
+                    Progress
+                  </span>
+                  <span className="font-bold text-accent flex items-center gap-1">
+                    {course.progress === 100 ? (
+                      <>
+                        <Sparkles className="w-4 h-4 animate-pulse" />
+                        Complete!
+                      </>
+                    ) : (
+                      `${course.progress}%`
+                    )}
+                  </span>
                 </div>
-                <Progress value={course.progress} className="h-2" />
+                <div className="relative">
+                  <Progress value={course.progress} className="h-3" />
+                  {course.progress === 100 && (
+                    <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-accent/10 rounded-full animate-pulse" />
+                  )}
+                </div>
+                {course.progress === 100 && (
+                  <p className="text-xs text-accent font-medium mt-1 text-center">🎉 Congratulations!</p>
+                )}
               </div>
             )}
 
             <Link href={`/courses/${course.id}`}>
               <Button className="w-full transition-all hover:scale-105">
-                {enrolled ? "Continue Learning" : "View Course"}
+                {enrolled ? (course.progress === 100 ? "Completed" : "Continue Learning") : "View Course"}
               </Button>
             </Link>
           </CardContent>

@@ -3,6 +3,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Trophy, Star, Award, TrendingUp, Flame, Crown } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
+import { Progress } from "@/components/ui/progress"
 import { AnimatedCounter } from "@/components/animated-counter"
 
 interface DashboardStatsProps {
@@ -42,7 +43,7 @@ export function DashboardStats({ user, badges, rank, streak }: DashboardStatsPro
         style={{ animationDelay: "100ms" }}
       >
         <CardContent className="p-6">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between mb-4">
             <div>
               <p className="text-sm text-muted-foreground mb-1">Current Level</p>
               <p className="text-3xl font-bold text-foreground">
@@ -55,6 +56,13 @@ export function DashboardStats({ user, badges, rank, streak }: DashboardStatsPro
             >
               <TrendingUp className="w-6 h-6 text-accent" />
             </div>
+          </div>
+          <div className="space-y-2">
+            <div className="flex justify-between text-xs text-muted-foreground">
+              <span>Progress to Level {user.level + 1}</span>
+              <span>{user.points % 100}/100 XP</span>
+            </div>
+            <Progress value={(user.points % 100)} className="h-2" />
           </div>
         </CardContent>
       </Card>
@@ -82,16 +90,16 @@ export function DashboardStats({ user, badges, rank, streak }: DashboardStatsPro
       </Card>
 
       <Card
-        className="border-border animate-in fade-in slide-in-from-bottom-4 duration-700 hover:scale-105 transition-transform"
+        className={`border-border animate-in fade-in slide-in-from-bottom-4 duration-700 hover:scale-105 transition-transform ${streak > 0 ? 'border-orange-200 bg-gradient-to-br from-orange-50/50 to-transparent dark:from-orange-950/20' : ''}`}
         style={{ animationDelay: "300ms" }}
       >
         <CardContent className="p-6">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-muted-foreground mb-1">{streak > 0 ? "Day Streak" : "Global Rank"}</p>
+              <p className="text-sm text-muted-foreground mb-1">{streak > 0 ? "Day Streak 🔥" : "Global Rank"}</p>
               {streak > 0 ? (
                 <p className="text-3xl font-bold text-foreground flex items-center gap-2">
-                  <Flame className="w-6 h-6 text-orange-500" />
+                  <Flame className={`w-6 h-6 text-orange-500 ${streak >= 7 ? 'animate-pulse' : ''}`} />
                   <AnimatedCounter value={streak} />
                 </p>
               ) : rank ? (
@@ -105,7 +113,22 @@ export function DashboardStats({ user, badges, rank, streak }: DashboardStatsPro
                 </Badge>
               )}
             </div>
+            {streak > 0 && (
+              <div
+                className="w-12 h-12 rounded-full bg-orange-100 dark:bg-orange-900/20 flex items-center justify-center animate-in zoom-in-50 duration-500"
+                style={{ animationDelay: "300ms" }}
+              >
+                <span className="text-orange-600 dark:text-orange-400 font-bold text-lg">🔥</span>
+              </div>
+            )}
           </div>
+          {streak > 0 && (
+            <div className="mt-4">
+              <p className="text-xs text-muted-foreground">
+                {streak >= 7 ? "Amazing! Keep it up! 🎉" : "Keep the momentum going!"}
+              </p>
+            </div>
+          )}
         </CardContent>
       </Card>
     </div>

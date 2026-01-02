@@ -31,7 +31,12 @@ export default async function ProfilePage() {
     GROUP BY u.id
   `
 
-  const userStats = stats[0] || {
+  const userStats = (stats[0] as {
+    courses_completed: number
+    courses_in_progress: number
+    lessons_completed: number
+    quizzes_passed: number
+  }) || {
     courses_completed: 0,
     courses_in_progress: 0,
     lessons_completed: 0,
@@ -39,39 +44,85 @@ export default async function ProfilePage() {
   }
 
   // Fetch badges
-  const badges = await sql`
-    SELECT 
-      b.id, b.name, b.description, b.icon_url, b.points_value,
-      ub.earned_at
-    FROM user_badges ub
-    JOIN badges b ON ub.badge_id = b.id
-    WHERE ub.user_id = ${user.id}
-    ORDER BY ub.earned_at DESC
-  `
+   const badges = (await sql`
+     SELECT
+       b.id, b.name, b.description, b.icon_url, b.points_value,
+       ub.earned_at
+     FROM user_badges ub
+     JOIN badges b ON ub.badge_id = b.id
+     WHERE ub.user_id = ${user.id}
+     ORDER BY ub.earned_at DESC
+   `) as Array<{
+     id: number
+     name: string
+     description: string
+     icon_url: string
+     points_value: number
+     earned_at: string
+   }>
 
-  // Fetch all available badges
-  const allBadges = await sql`
+  // Fetch all available badges (exclude teacher badges for learners)
+  const allBadges = (await sql`
     SELECT id, name, description, icon_url, points_value
     FROM badges
+    WHERE NOT (criteria->>'type' LIKE 'teacher_%')
     ORDER BY points_value DESC
-  `
+  `) as Array<{
+    id: number
+    name: string
+    description: string
+    icon_url: string
+    points_value: number
+  }>
 
   const earnedBadgeIds = new Set(badges.map((b) => b.id))
   const lockedBadges = allBadges.filter((b) => !earnedBadgeIds.has(b.id))
 
   // Fetch achievements
-  const achievements = await sql`
+  const achievements = (await sql`
     SELECT type, title, description, points_earned, created_at
     FROM achievements
     WHERE user_id = ${user.id}
     ORDER BY created_at DESC
     LIMIT 20
-  `
+  `) as Array<{
+    type: string
+    title: string
+    description: string
+    points_earned: number
+    created_at: string
+  }>
+
+  const rankData = (await sql`
+    SELECT rank FROM leaderboard WHERE id = ${user.id}
+  `) as { rank: number | null }[]
+  const userRank = rankData[0]?.rank || null
+
+  const streakData = (await sql`
+    SELECT
+      COUNT(DISTINCT DATE(completed_at)) as streak
+    FROM lesson_progress
+    WHERE user_id = ${user.id}
+      AND completed = true
+      AND completed_at >= NOW() - INTERVAL '7 days'
+  `) as { streak: number }[]
+  const currentStreak = streakData[0]?.streak || 0
+
+  // Calculate level based on points (100 points per level)
+  const calculatedLevel = Math.floor(user.points / 100) + 1
+
+  // Update level in database if different
+  if (user.level !== calculatedLevel) {
+    await sql`
+      UPDATE users SET level = ${calculatedLevel} WHERE id = ${user.id}
+    `
+  }
+
+  user.level = calculatedLevel
 
   // Calculate level progress
-  const pointsForNextLevel = user.level * 100
   const pointsInCurrentLevel = user.points % 100
-  const levelProgress = (pointsInCurrentLevel / pointsForNextLevel) * 100
+  const levelProgress = pointsInCurrentLevel
 
   const initials = user.full_name
     .split(" ")
@@ -106,11 +157,11 @@ export default async function ProfilePage() {
                         <span className="text-sm text-muted-foreground">{Math.round(levelProgress)}%</span>
                       </div>
                       <p className="text-xs text-muted-foreground mt-1">
-                        {pointsInCurrentLevel} / {pointsForNextLevel} XP
+                        {pointsInCurrentLevel} / 100 XP
                       </p>
                     </div>
 
-                    <div className="flex items-center gap-6">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                       <div className="text-center">
                         <p className="text-2xl font-bold text-primary">{user.points.toLocaleString()}</p>
                         <p className="text-sm text-muted-foreground">Total Points</p>
@@ -118,6 +169,16 @@ export default async function ProfilePage() {
                       <div className="text-center">
                         <p className="text-2xl font-bold text-accent">{badges.length}</p>
                         <p className="text-sm text-muted-foreground">Badges</p>
+                      </div>
+                      {userRank && (
+                        <div className="text-center">
+                          <p className="text-2xl font-bold text-foreground">#{userRank}</p>
+                          <p className="text-sm text-muted-foreground">Global Rank</p>
+                        </div>
+                      )}
+                      <div className="text-center">
+                        <p className="text-2xl font-bold text-orange-600">{currentStreak}</p>
+                        <p className="text-sm text-muted-foreground">Day Streak</p>
                       </div>
                     </div>
                   </div>

@@ -10,6 +10,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Label } from "@/components/ui/label"
 import { Plus, Trash2, ChevronLeft, ChevronRight, Upload, X } from "lucide-react"
 import { createCourseWithContent, updateCourse, uploadCourseThumbnail } from "@/app/actions/courses"
+import { useToast } from "@/hooks/use-toast"
 
 interface Module {
   id: string
@@ -76,6 +77,7 @@ interface CourseWizardProps {
 
 export function CourseWizard({ teachers, course, modules: existingModules }: CourseWizardProps) {
   const router = useRouter()
+  const { toast } = useToast()
   const [currentStep, setCurrentStep] = useState(1)
   const [isLoading, setIsLoading] = useState(false)
 
@@ -256,7 +258,11 @@ export function CourseWizard({ teachers, course, modules: existingModules }: Cou
         if (uploadResult.success && uploadResult.url) {
           thumbnailUrl = uploadResult.url
         } else {
-          alert(uploadResult.error || "Failed to upload thumbnail")
+          toast({
+            title: "Upload Failed",
+            description: uploadResult.error || "Failed to upload thumbnail",
+            variant: "destructive",
+          })
           setIsLoading(false)
           return
         }
@@ -274,9 +280,17 @@ export function CourseWizard({ teachers, course, modules: existingModules }: Cou
           is_published: courseData.is_published,
         })
         if (result.success) {
-          router.push(`/tutor/courses/${course.id}`)
+          toast({
+            title: "Course Updated Successfully! 🎉",
+            description: "Your course has been updated and is ready for students.",
+          })
+          setTimeout(() => router.push(`/tutor/courses/${course.id}`), 1500)
         } else {
-          alert(result.error || "Failed to update course")
+          toast({
+            title: "Update Failed",
+            description: result.error || "Failed to update course",
+            variant: "destructive",
+          })
         }
       } else {
         // Create new course
@@ -286,13 +300,25 @@ export function CourseWizard({ teachers, course, modules: existingModules }: Cou
           modules
         })
         if (result.success) {
-          router.push("/tutor")
+          toast({
+            title: "Course Created Successfully! 🎉",
+            description: "Your new course has been created and is ready for students.",
+          })
+          setTimeout(() => router.push("/tutor"), 1500)
         } else {
-          alert(result.error || "Failed to create course")
+          toast({
+            title: "Creation Failed",
+            description: result.error || "Failed to create course",
+            variant: "destructive",
+          })
         }
       }
     } catch (error) {
-      alert(`Failed to ${course ? 'update' : 'create'} course`)
+      toast({
+        title: "Operation Failed",
+        description: `Failed to ${course ? 'update' : 'create'} course. Please try again.`,
+        variant: "destructive",
+      })
     } finally {
       setIsLoading(false)
     }

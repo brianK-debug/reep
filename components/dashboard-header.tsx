@@ -8,15 +8,16 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { Zap, LogOut, User, Trophy, BarChart3, Target, ShoppingBag, BookOpen } from "lucide-react"
+import { LogOut, User, Trophy, BarChart3, Target, ShoppingBag, BookOpen } from "lucide-react"
 import Link from "next/link"
 import { signOut } from "@/app/actions/auth"
+import Image from "next/image"
 
 interface DashboardHeaderProps {
   user: {
     full_name: string
     email: string
-    avatar_url?: string
+    avatar_url?: string | null
     role: string
   }
 }
@@ -36,8 +37,14 @@ export function DashboardHeader({ user }: DashboardHeaderProps) {
           user.role === "teacher" ? "/tutor" :
           "/dashboard"
         } className="flex items-center gap-2">
-          <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-            <Zap className="w-6 h-6 text-white" />
+          <div className="w-12 h-12 rounded-lg overflow-hidden">
+            <Image
+              src="/logo.png"
+              alt="Logo"
+              width={48}
+              height={48}
+              className="w-full h-full object-cover"
+            />
           </div>
           <span className="text-2xl font-bold text-foreground">REEP</span>
         </Link>

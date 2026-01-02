@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { BookOpen, Trophy, Users, Zap } from "lucide-react"
+import Image from "next/image"
 
 export default function HomePage() {
   return (
@@ -9,8 +10,14 @@ export default function HomePage() {
       <header className="border-b border-border bg-background/80 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-              <Zap className="w-6 h-6 text-white" />
+            <div className="w-12 h-12 rounded-lg overflow-hidden">
+              <Image
+                src="/logo.png"
+                alt="Logo"
+                width={48}
+                height={48}
+                className="w-full h-full object-cover"
+              />
             </div>
             <span className="text-2xl font-bold text-foreground">REEP</span>
           </div>
@@ -32,8 +39,10 @@ export default function HomePage() {
       </header>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-20 md:py-32">
-        <div className="max-w-4xl mx-auto text-center animate-in fade-in slide-in-from-bottom-4 duration-1000">
+      <section className="relative py-20 md:py-32 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/bg.jpg')" }}>
+        <div className="absolute inset-0 bg-background/70"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center animate-in fade-in slide-in-from-bottom-4 duration-1000">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-foreground leading-tight">
             Remote Education <br />
             <span className="text-primary">Engagement Platform</span>
@@ -60,6 +69,7 @@ export default function HomePage() {
                 Explore Features
               </Button>
             </Link>
+          </div>
           </div>
         </div>
       </section>

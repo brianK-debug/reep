@@ -29,7 +29,14 @@ export default async function CoursePage({ params }: { params: Promise<{ courseI
     redirect("/dashboard")
   }
 
-  const course = courses[0]
+  const course = courses[0] as {
+    id: number
+    title: string
+    description: string
+    difficulty: string
+    teacher_name: string
+    points_reward: number
+  }
 
   // Check enrollment
   const enrollments = await sql`
@@ -65,21 +72,24 @@ export default async function CoursePage({ params }: { params: Promise<{ courseI
 
   // Group lessons by module
   const modulesWithLessons = modules.map((module) => ({
-    ...module,
+    id: module.id,
+    title: module.title,
+    description: module.description,
     lessons: lessonsData
       .filter((l) => l.module_id === module.id)
       .map((l) => ({
-        ...l,
+        id: l.id,
+        title: l.title,
         completed: completedLessonIds.has(l.id),
       })),
   }))
 
   return (
-    <div className="min-h-screen bg-background">
-      <div className="border-b border-border bg-surface">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
+      <div className="border-b border-border/50 bg-surface/80 backdrop-blur-sm sticky top-0 z-10">
         <div className="container mx-auto px-4 py-4">
           <Link href="/dashboard">
-            <Button variant="ghost" size="sm">
+            <Button variant="ghost" size="sm" className="hover:bg-primary/10 transition-colors">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Dashboard
             </Button>

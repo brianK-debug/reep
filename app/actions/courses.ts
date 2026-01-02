@@ -624,11 +624,22 @@ export async function completeLesson(formData: FormData) {
       }
     }
 
+    // Check if module is completed
+    const moduleCompletion = await checkModuleCompletion(userId, lessonId)
+
     // Update course progress
     await updateCourseProgress(userId, courseId)
 
     revalidatePath(`/courses/${courseId}/lessons/${lessonId}`)
-    return { success: true }
+    revalidatePath(`/courses/${courseId}`)
+    revalidatePath("/dashboard")
+    return {
+      success: true,
+      pointsEarned: pointsReward,
+      moduleCompleted: moduleCompletion.completed,
+      moduleTitle: moduleCompletion.title,
+      modulePoints: moduleCompletion.points
+    }
   } catch (error) {
     console.error("[v0] Complete lesson error:", error)
     return { success: false, error: "Failed to complete lesson" }
@@ -846,6 +857,64 @@ async function updateCourseProgress(userId: number, courseId: number) {
       }
     }
   }
+}
+
+// Helper function to check if module is completed
+async function checkModuleCompletion(userId: number, lessonId: number) {
+  // Get the module for this lesson
+  const lessonData = await sql`
+    SELECT m.id, m.title
+    FROM lessons l
+    JOIN modules m ON l.module_id = m.id
+    WHERE l.id = ${lessonId}
+  `
+
+  if (lessonData.length === 0) return { completed: false }
+
+  const moduleId = lessonData[0].id
+  const moduleTitle = lessonData[0].title
+
+  // Get total lessons in module
+  const totalLessons = await sql`
+    SELECT COUNT(*) as count FROM lessons WHERE module_id = ${moduleId}
+  `
+
+  // Get completed lessons in module
+  const completedLessons = await sql`
+    SELECT COUNT(*) as count
+    FROM lesson_progress lp
+    JOIN lessons l ON lp.lesson_id = l.id
+    WHERE lp.user_id = ${userId}
+      AND l.module_id = ${moduleId}
+      AND lp.completed = true
+  `
+
+  const total = totalLessons[0].count
+  const completed = completedLessons[0].count
+
+  if (completed === total) {
+    // Module completed! Award points and create achievement
+    const modulePoints = 15 // Fixed points for module completion
+
+    await sql`
+      UPDATE users SET points = points + ${modulePoints} WHERE id = ${userId}
+    `
+
+    await sql`
+      INSERT INTO achievements (user_id, type, title, description, points_earned)
+      VALUES (
+        ${userId},
+        'module_completed',
+        'Module Master',
+        'Completed module: ${moduleTitle}',
+        ${modulePoints}
+      )
+    `
+
+    return { completed: true, title: moduleTitle, points: modulePoints }
+  }
+
+  return { completed: false }
 }
 
 // Helper function to update user level based on points

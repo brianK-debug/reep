@@ -1,6 +1,7 @@
 import { SignInForm } from "@/components/sign-in-form"
 import Link from "next/link"
 import { Zap } from "lucide-react"
+import Image from "next/image"
 
 export default function SignInPage() {
   return (
@@ -8,8 +9,14 @@ export default function SignInPage() {
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <Link href="/" className="inline-flex items-center gap-2 mb-6">
-            <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-              <Zap className="w-6 h-6 text-white" />
+            <div className="w-12 h-12 rounded-lg overflow-hidden">
+              <Image
+                src="/logo.png"
+                alt="Logo"
+                width={48}
+                height={48}
+                className="w-full h-full object-cover"
+              />
             </div>
             <span className="text-2xl font-bold text-foreground">REEP</span>
           </Link>

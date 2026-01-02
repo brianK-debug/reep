@@ -81,3 +81,45 @@ CREATE INDEX IF NOT EXISTS idx_daily_challenges_dates ON daily_challenges(start_
 CREATE INDEX IF NOT EXISTS idx_user_daily_challenges_user ON user_daily_challenges(user_id);
 CREATE INDEX IF NOT EXISTS idx_user_streaks_user ON user_streaks(user_id);
 CREATE INDEX IF NOT EXISTS idx_user_power_ups_user ON user_power_ups(user_id);
+
+-- Recalculate progress for all existing enrollments
+DO $$
+DECLARE
+    enrollment_record RECORD;
+    total_lessons INTEGER;
+    completed_lessons INTEGER;
+    calculated_progress INTEGER;
+BEGIN
+    FOR enrollment_record IN SELECT * FROM enrollments LOOP
+        -- Get total lessons in course
+        SELECT COUNT(*) INTO total_lessons
+        FROM lessons l
+        JOIN modules m ON l.module_id = m.id
+        WHERE m.course_id = enrollment_record.course_id;
+
+        -- Get completed lessons by user
+        SELECT COUNT(*) INTO completed_lessons
+        FROM lesson_progress lp
+        JOIN lessons l ON lp.lesson_id = l.id
+        JOIN modules m ON l.module_id = m.id
+        WHERE lp.user_id = enrollment_record.user_id
+          AND m.course_id = enrollment_record.course_id
+          AND lp.completed = true;
+
+        -- Calculate progress
+        IF total_lessons > 0 THEN
+            calculated_progress := ROUND((completed_lessons::DECIMAL / total_lessons::DECIMAL) * 100);
+        ELSE
+            calculated_progress := 0;
+        END IF;
+
+        -- Update enrollment progress
+        UPDATE enrollments
+        SET progress = calculated_progress,
+            status = CASE WHEN calculated_progress = 100 THEN 'completed' ELSE 'active' END,
+            completed_at = CASE WHEN calculated_progress = 100 THEN COALESCE(completed_at, NOW()) ELSE NULL END
+        WHERE user_id = enrollment_record.user_id AND course_id = enrollment_record.course_id;
+
+        RAISE NOTICE 'Updated progress for user % course %: %/% = %%%', enrollment_record.user_id, enrollment_record.course_id, completed_lessons, total_lessons, calculated_progress;
+    END LOOP;
+END $$;

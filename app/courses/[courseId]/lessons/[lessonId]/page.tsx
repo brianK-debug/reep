@@ -62,6 +62,22 @@ export default async function LessonPage({
 
   const completed = progress.length > 0 && progress[0].completed
 
+  // Fetch user data for gamification
+  const userData = await sql`
+    SELECT points, level FROM users WHERE id = ${user.id}
+  `
+
+  const userLevel = userData[0]?.level || 1
+  const userPoints = userData[0]?.points || 0
+
+  // Fetch course progress
+  const courseProgressData = await sql`
+    SELECT progress FROM enrollments
+    WHERE user_id = ${user.id} AND course_id = ${Number.parseInt(courseId)}
+  `
+
+  const courseProgress = courseProgressData[0]?.progress || 0
+
   // Quizzes are now at module level, not lesson level
   const quiz = null
   const questions: any[] = []
@@ -80,10 +96,17 @@ export default async function LessonPage({
   const nextLesson = currentIndex < allLessons.length - 1 ? allLessons[currentIndex + 1] as { id: number; title: string } : null
 
   return (
-    <div className="min-h-screen bg-background">
-      <LessonHeader lesson={lesson} courseId={Number.parseInt(courseId)} completed={completed} />
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
+      <LessonHeader
+        lesson={lesson}
+        courseId={Number.parseInt(courseId)}
+        completed={completed}
+        courseProgress={courseProgress}
+        userLevel={userLevel}
+        userPoints={userPoints}
+      />
 
-      <main className="container mx-auto px-4 py-8 max-w-4xl">
+      <main className="container mx-auto px-4 py-8 max-w-4xl animate-in fade-in-50 duration-700">
         <LessonContent
           lesson={lesson}
           quiz={quiz}

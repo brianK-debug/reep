@@ -1,6 +1,18 @@
 {
+  "/admin/analytics/page": "app/admin/analytics/page.js",
+  "/admin/page": "app/admin/page.js",
+  "/challenges/page": "app/challenges/page.js",
+  "/courses/[courseId]/lessons/[lessonId]/page": "app/courses/[courseId]/lessons/[lessonId]/page.js",
   "/courses/[courseId]/page": "app/courses/[courseId]/page.js",
   "/dashboard/page": "app/dashboard/page.js",
+  "/leaderboard/page": "app/leaderboard/page.js",
   "/page": "app/page.js",
-  "/sign-in/page": "app/sign-in/page.js"
+  "/profile/page": "app/profile/page.js",
+  "/shop/page": "app/shop/page.js",
+  "/sign-in/page": "app/sign-in/page.js",
+  "/sign-up/page": "app/sign-up/page.js",
+  "/tutor/courses/[courseId]/edit/page": "app/tutor/courses/[courseId]/edit/page.js",
+  "/tutor/courses/[courseId]/page": "app/tutor/courses/[courseId]/page.js",
+  "/tutor/courses/new/page": "app/tutor/courses/new/page.js",
+  "/tutor/page": "app/tutor/page.js"
 }

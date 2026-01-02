@@ -43,12 +43,11 @@ export async function signUp(prevState: any, formData: FormData) {
     const user = result[0] as User
 
     await setSession(user)
+    return { success: "Account created successfully! Welcome to REEP." }
   } catch (error) {
     console.error("[v0] Sign up error:", error)
     return { error: "Failed to create account. Please try again." }
   }
-
-  redirect("/dashboard")
 }
 
 export async function signIn(prevState: any, formData: FormData) {
@@ -58,6 +57,8 @@ export async function signIn(prevState: any, formData: FormData) {
   if (!email || !password) {
     return { error: "Email and password are required" }
   }
+
+  let user: User & { password_hash: string } | null = null
 
   try {
     const result = await sql`
@@ -70,7 +71,7 @@ export async function signIn(prevState: any, formData: FormData) {
       return { error: "Invalid email or password" }
     }
 
-    const user = result[0] as User & { password_hash: string }
+    user = result[0] as User & { password_hash: string }
 
     const isValid = await verifyPassword(password, user.password_hash)
 
@@ -81,16 +82,9 @@ export async function signIn(prevState: any, formData: FormData) {
     const { password_hash, ...userWithoutPassword } = user
 
     await setSession(userWithoutPassword as User)
-
-    // Redirect based on user role
-    if (user.role === "admin") {
-      redirect("/admin")
-    } else if (user.role === "teacher") {
-      redirect("/tutor")
-    } else {
-      redirect("/dashboard")
-    }
-  } catch (error) {
+    return { success: "Signed in successfully! Redirecting...", role: user!.role }
+  }
+  catch (error) {
     console.error("[v0] Sign in error:", error)
     return { error: "Failed to sign in. Please try again." }
   }

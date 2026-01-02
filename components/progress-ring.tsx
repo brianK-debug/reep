@@ -5,9 +5,10 @@ interface ProgressRingProps {
   size?: number
   strokeWidth?: number
   className?: string
+  showCenterText?: boolean
 }
 
-export function ProgressRing({ progress, size = 120, strokeWidth = 8, className = "" }: ProgressRingProps) {
+export function ProgressRing({ progress, size = 120, strokeWidth = 8, className = "", showCenterText = true }: ProgressRingProps) {
   const radius = (size - strokeWidth) / 2
   const circumference = radius * 2 * Math.PI
   const offset = circumference - (progress / 100) * circumference
@@ -37,9 +38,11 @@ export function ProgressRing({ progress, size = 120, strokeWidth = 8, className 
           cy={size / 2}
         />
       </svg>
-      <div className="absolute inset-0 flex items-center justify-center">
-        <span className="text-2xl font-bold text-foreground">{Math.round(progress)}%</span>
-      </div>
+      {showCenterText && (
+        <div className="absolute inset-0 flex items-center justify-center">
+          <span className="text-2xl font-bold text-foreground">{Math.round(progress)}%</span>
+        </div>
+      )}
     </div>
   )
 }

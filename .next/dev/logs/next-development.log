@@ -1,37 +1,279 @@
-[00:00:36.880] Server  LOG      ○ Compiling proxy ...
-[00:00:45.014] Server  LOG      ✓ Ready in 40.8s
-[00:00:48.390] Server  LOG      ○ Compiling / ...
-[00:01:20.256] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:20.738] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:01:20.738] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:01:20.738] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1766260534462}
-[00:04:15.717] Server  LOG      ○ Compiling /dashboard ...
-[00:04:18.007] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1766260711732}
-[00:04:35.293] Server  LOG      ○ Compiling /courses/[courseId] ...
-[00:04:37.580] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/courses/5 color: rgb(120, 120, 120) color: inherit {"dp":"/courses/[courseId]","o":"http://localhost:3000/courses/5","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1766260731300}
-[00:04:52.628] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\.next\dev\server\chunks\ssr\node_modules_829d0694._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[00:04:52.633] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\.next\dev\server\chunks\ssr\[root-of-the-server]__ec8b52a1._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[00:04:52.890] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[00:04:52.916] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\.next\dev\server\chunks\ssr\node_modules_1a615301._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[00:04:52.926] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[00:04:52.934] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[00:04:52.942] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[00:04:52.945] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[00:04:52.950] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[00:04:52.978] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[00:04:52.994] Server  ERROR   [v0] Enrollment error: Error: NEXT_REDIRECT
-[00:05:37.985] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1766260791713}
-[00:05:53.025] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1766260806755}
-[00:06:01.989] Server  LOG      ○ Compiling /sign-in ...
-[00:06:02.393] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/sign-in color: rgb(120, 120, 120) color: inherit {"dp":"/sign-in","o":"http://localhost:3000/sign-in","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1766260816119}
-[00:06:35.390] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\.next\dev\server\chunks\ssr\node_modules_829d0694._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[00:06:35.391] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\.next\dev\server\chunks\ssr\_ee81a649._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[00:06:35.400] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[00:06:35.459] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\.next\dev\server\chunks\ssr\node_modules_191249f6._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[00:06:35.460] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[00:06:35.461] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[00:06:35.463] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[00:06:35.465] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[00:06:35.466] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[00:06:35.467] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
-[00:06:35.469] Server  ERROR   [v0] Sign in error: Error: NEXT_REDIRECT
+[00:01:32.703] Server  LOG      ○ Compiling proxy ...
+[00:02:03.813] Server  LOG      ✓ Ready in 96.8s
+[00:11:17.292] Server  LOG      ○ Compiling / ...
+[00:12:24.841] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:12:26.217] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:12:26.218] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:12:26.218] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767251395972}
+[00:41:28.340] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:41:30.166] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:41:30.167] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:41:30.167] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767253138997}
+[00:47:33.825] Server  LOG      ○ Compiling /dashboard ...
+[00:48:14.767] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767253544085}
+[00:50:42.398] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:50:42.692] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:50:42.692] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard","route":"/dashboard"}
+[00:50:42.692] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767253692438}
+[00:51:38.895] Server  LOG      ✓ Compiled in 677ms
+[00:54:15.403] Server  LOG      ✓ Compiled in 869ms
+[00:54:20.206] Server  LOG      ○ Compiling /challenges ...
+[00:54:24.772] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/challenges color: rgb(120, 120, 120) color: inherit {"dp":"/challenges","o":"http://localhost:3000/challenges","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767253913966}
+[00:54:54.780] Server  LOG      ○ Compiling /shop ...
+[00:55:01.605] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/leaderboard color: rgb(120, 120, 120) color: inherit {"dp":"/leaderboard","o":"http://localhost:3000/leaderboard","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767253951354}
+[00:57:20.994] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/profile color: rgb(120, 120, 120) color: inherit {"dp":"/profile","o":"http://localhost:3000/profile","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767254090748}
+[00:58:34.397] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767254164145}
+[00:59:12.937] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/profile color: rgb(120, 120, 120) color: inherit {"dp":"/profile","o":"http://localhost:3000/profile","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767254202691}
+[03:27:32.556] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:27:36.647] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[03:27:36.647] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/profile","route":"/profile"}
+[03:27:36.647] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/profile color: rgb(120, 120, 120) color: inherit {"dp":"/profile","o":"http://localhost:3000/profile","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767267345360}
+[03:31:27.997] Server  LOG      ○ Compiling /profile ...
+[04:29:55.607] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:29:58.772] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[04:29:58.772] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/profile","route":"/profile"}
+[04:29:58.772] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/profile color: rgb(120, 120, 120) color: inherit {"dp":"/profile","o":"http://localhost:3000/profile","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767271089269}
+[04:30:04.775] Browser ERROR   unhandledRejection: i: Failed to connect to MetaMask
+[04:32:54.074] Server  LOG      ○ Compiling /profile ...
+[05:00:17.019] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:00:19.731] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[05:00:19.731] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/profile","route":"/profile"}
+[05:00:19.731] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/profile color: rgb(120, 120, 120) color: inherit {"dp":"/profile","o":"http://localhost:3000/profile","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767272909350}
+[05:00:27.799] Browser ERROR   unhandledRejection: i: Failed to connect to MetaMask
+[05:01:59.028] Server  LOG      ○ Compiling /dashboard ...
+[05:02:07.859] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767273017930}
+[05:18:10.133] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767273981057}
+[05:23:04.644] Server  LOG      ✓ Compiled in 35.2s
+[05:24:17.557] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:24:18.390] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[05:24:18.391] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[05:24:18.391] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767274349369}
+[05:24:25.426] Browser ERROR   unhandledRejection: i: Failed to connect to MetaMask
+[05:29:12.395] Server  LOG      ○ Compiling /sign-in ...
+[05:30:44.767] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/sign-in color: rgb(120, 120, 120) color: inherit {"dp":"/sign-in","o":"http://localhost:3000/sign-in","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767274735644}
+[06:57:26.615] Server  LOG      ○ Compiling /sign-up ...
+[06:58:29.734] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/sign-up color: rgb(120, 120, 120) color: inherit {"dp":"/sign-up","o":"http://localhost:3000/sign-up","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767280000635}
+[06:59:07.501] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767280038486}
+[07:01:24.814] Server  LOG      ✓ Compiled in 21.2s
+[07:01:41.762] Server  LOG      ✓ Compiled in 4.7s
+[07:02:44.332] Server  LOG      ✓ Compiled in 6.7s
+[07:02:49.140] Server  LOG      ○ Compiling /leaderboard ...
+[07:03:00.720] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/leaderboard color: rgb(120, 120, 120) color: inherit {"dp":"/leaderboard","o":"http://localhost:3000/leaderboard","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767280271692}
+[07:03:44.230] Server  LOG      ✓ Compiled in 7s
+[07:04:22.387] Server  LOG      ✓ Compiled in 1955ms
+[07:04:35.021] Server  LOG      ✓ Compiled in 2.6s
+[07:04:45.846] Server  LOG      ✓ Compiled in 647ms
+[07:05:01.292] Server  LOG      ✓ Compiled in 1112ms
+[07:09:02.462] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767280632389}
+[07:09:33.586] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/sign-up color: rgb(120, 120, 120) color: inherit {"dp":"/sign-up","o":"http://localhost:3000/sign-up","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767280664574}
+[07:10:04.252] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767280695234}
+[07:11:36.037] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[07:11:36.769] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[07:11:36.769] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[07:11:36.769] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767280787520}
+[07:11:45.860] Browser ERROR   unhandledRejection: i: Failed to connect to MetaMask
+[07:11:49.561] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767280800551}
+[07:12:00.533] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767280810775}
+[07:12:03.012] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/sign-up color: rgb(120, 120, 120) color: inherit {"dp":"/sign-up","o":"http://localhost:3000/sign-up","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767280813999}
+[07:13:24.986] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767280895967}
+[07:14:46.764] Server  LOG      ✓ Compiled in 27.3s
+[07:14:49.598] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767280980582}
+[07:20:47.094] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[07:20:47.861] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[07:20:47.861] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[07:20:47.861] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767281338721}
+[07:20:55.771] Browser ERROR   unhandledRejection: i: Failed to connect to MetaMask
+[07:25:57.212] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/sign-up color: rgb(120, 120, 120) color: inherit {"dp":"/sign-up","o":"http://localhost:3000/sign-up","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767281648189}
+[07:26:27.316] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767281678303}
+[07:37:34.342] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767282344850}
+[07:37:40.478] Server  LOG      ○ Compiling /sign-in ...
+[07:37:42.724] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/sign-in color: rgb(120, 120, 120) color: inherit {"dp":"/sign-in","o":"http://localhost:3000/sign-in","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767282353659}
+[07:38:01.612] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767282372260}
+[07:38:07.479] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767282377949}
+[07:38:10.448] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/sign-in color: rgb(120, 120, 120) color: inherit {"dp":"/sign-in","o":"http://localhost:3000/sign-in","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767282381428}
+[07:46:02.878] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767282853854}
+[07:46:09.795] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767282860281}
+[07:46:12.927] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/sign-in color: rgb(120, 120, 120) color: inherit {"dp":"/sign-in","o":"http://localhost:3000/sign-in","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767282863915}
+[07:46:35.570] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767282886555}
+[07:53:33.400] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767283304393}
+[07:53:37.706] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/sign-in color: rgb(120, 120, 120) color: inherit {"dp":"/sign-in","o":"http://localhost:3000/sign-in","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767283308692}
+[07:54:26.543] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767283357528}
+[07:54:34.954] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767283365161}
+[07:54:37.969] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/sign-in color: rgb(120, 120, 120) color: inherit {"dp":"/sign-in","o":"http://localhost:3000/sign-in","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767283368961}
+[07:54:52.757] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767283383739}
+[07:54:59.227] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767283389634}
+[07:55:01.328] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/sign-in color: rgb(120, 120, 120) color: inherit {"dp":"/sign-in","o":"http://localhost:3000/sign-in","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767283392307}
+[07:55:24.915] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767283415905}
+[07:57:43.126] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767283553613}
+[07:57:47.475] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/sign-in color: rgb(120, 120, 120) color: inherit {"dp":"/sign-in","o":"http://localhost:3000/sign-in","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767283558454}
+[07:58:10.536] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767283581523}
+[08:00:41.197] Server  LOG      ✓ Compiled in 25.5s
+[08:00:50.020] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[08:00:50.529] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[08:00:50.529] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard","route":"/dashboard"}
+[08:00:50.529] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767283741412}
+[08:00:56.678] Browser ERROR   unhandledRejection: i: Failed to connect to MetaMask
+[08:02:26.130] Server  LOG      ○ Compiling /_error ...
+[08:03:38.978] Server  LOG      ✓ Compiled in 75.8s
+[08:04:40.733] Browser ERROR   uncaughtError: Error: An unexpected Turbopack error occurred. Please see the output of `next dev` for more details.
+[08:04:51.767] Browser ERROR   unhandledRejection: i: Failed to connect to MetaMask
+[08:05:10.658] Browser ERROR   uncaughtError: Error: An unexpected Turbopack error occurred. Please see the output of `next dev` for more details.
+[08:05:21.765] Browser ERROR   unhandledRejection: i: Failed to connect to MetaMask
+[08:06:49.452] Browser ERROR   uncaughtError: Error: An unexpected Turbopack error occurred. Please see the output of `next dev` for more details.
+[08:06:52.872] Browser ERROR   uncaughtError: Error: An unexpected Turbopack error occurred. Please see the output of `next dev` for more details.
+[08:07:03.765] Browser ERROR   unhandledRejection: i: Failed to connect to MetaMask
+[08:07:09.042] Server  LOG      ✓ Compiled in 687ms
+[08:07:12.601] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[08:07:13.764] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[08:07:13.764] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard","route":"/dashboard"}
+[08:07:13.764] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767284123971}
+[08:07:23.774] Browser ERROR   unhandledRejection: i: Failed to connect to MetaMask
+[08:07:44.118] Server  LOG      ✓ Compiled in 1437ms
+[08:09:48.072] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[08:09:48.247] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[08:09:48.247] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard","route":"/dashboard"}
+[08:09:48.247] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767284279236}
+[08:09:57.752] Browser ERROR   unhandledRejection: i: Failed to connect to MetaMask
+[08:11:53.468] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767284404451}
+[08:12:15.927] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/sign-in color: rgb(120, 120, 120) color: inherit {"dp":"/sign-in","o":"http://localhost:3000/sign-in","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767284425599}
+[08:34:50.472] Server  LOG      ○ Compiling /tutor ...
+[08:35:58.763] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/tutor color: rgb(120, 120, 120) color: inherit {"dp":"/tutor","o":"http://localhost:3000/tutor","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767285849600}
+[08:47:31.414] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767286541445}
+[08:48:57.486] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/sign-in color: rgb(120, 120, 120) color: inherit {"dp":"/sign-in","o":"http://localhost:3000/sign-in","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767286628474}
+[08:49:31.568] Server  LOG      ○ Compiling /admin ...
+[08:49:35.090] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/admin color: rgb(120, 120, 120) color: inherit {"dp":"/admin","o":"http://localhost:3000/admin","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767286666040}
+[08:49:42.549] Browser ERROR   uncaughtError: TypeError: Failed to execute 'measure' on 'Performance': '​AdminDashboardPage' cannot have a negative time stamp.
+[08:49:44.124] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767286675112}
+[08:53:46.478] Server  LOG      ✓ Compiled in 6.5s
+[08:53:54.399] Server  LOG      ✓ Compiled in 1718ms
+[08:54:08.008] Server  LOG      ✓ Compiled in 1656ms
+[08:54:34.771] Server  LOG      ✓ Compiled in 9.8s
+[08:54:58.043] Server  LOG      ✓ Compiled in 1206ms
+[08:57:04.475] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[08:57:05.206] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[08:57:05.207] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard","route":"/dashboard"}
+[08:57:05.207] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767287116194}
+[08:57:11.909] Browser ERROR   unhandledRejection: i: Failed to connect to MetaMask
+[08:57:18.936] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/admin color: rgb(120, 120, 120) color: inherit {"dp":"/admin","o":"http://localhost:3000/admin","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767287129924}
+[08:57:22.349] Browser ERROR   uncaughtError: TypeError: Failed to execute 'measure' on 'Performance': '​AdminDashboardPage' cannot have a negative time stamp.
+[08:57:22.508] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767287133477}
+[08:57:37.653] Server  LOG      ○ Compiling /admin/analytics ...
+[08:57:39.988] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/admin/analytics color: rgb(120, 120, 120) color: inherit {"dp":"/admin/analytics","o":"http://localhost:3000/admin/analytics","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767287150969}
+[09:00:15.975] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767287306966}
+[09:01:21.769] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/sign-in color: rgb(120, 120, 120) color: inherit {"dp":"/sign-in","o":"http://localhost:3000/sign-in","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767287371855}
+[09:02:37.065] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/admin/analytics color: rgb(120, 120, 120) color: inherit {"dp":"/admin/analytics","o":"http://localhost:3000/admin/analytics","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767287448045}
+[09:09:56.741] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767287887200}
+[09:10:00.368] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/sign-in color: rgb(120, 120, 120) color: inherit {"dp":"/sign-in","o":"http://localhost:3000/sign-in","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767287891347}
+[09:10:14.082] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/sign-up color: rgb(120, 120, 120) color: inherit {"dp":"/sign-up","o":"http://localhost:3000/sign-up","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767287905067}
+[09:11:38.797] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767287989691}
+[09:11:38.797] Browser ERROR   uncaughtError: TypeError: Failed to execute 'measure' on 'Performance': '​DashboardPage' cannot have a negative time stamp.
+[09:11:39.017] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/tutor color: rgb(120, 120, 120) color: inherit {"dp":"/tutor","o":"http://localhost:3000/tutor","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767287989995}
+[09:11:47.556] Server  LOG      ○ Compiling /tutor/courses/new ...
+[09:12:51.762] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/tutor/courses/new color: rgb(120, 120, 120) color: inherit {"dp":"/tutor/courses/new","o":"http://localhost:3000/tutor/courses/new","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767288062486}
+[09:16:54.103] Server  LOG      ✓ Compiled in 3.7s
+[09:17:04.311] Server  LOG      ✓ Compiled in 1011ms
+[09:49:27.768] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/tutor color: rgb(120, 120, 120) color: inherit {"dp":"/tutor","o":"http://localhost:3000/tutor","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767290258190}
+[09:50:00.883] Server  LOG      ✓ Compiled in 1367ms
+[09:50:13.733] Server  LOG      ✓ Compiled in 3.7s
+[09:50:21.238] Server  LOG      ✓ Compiled in 962ms
+[09:50:30.879] Server  LOG      ✓ Compiled in 703ms
+[09:50:39.461] Server  LOG      ✓ Compiled in 614ms
+[09:50:56.546] Server  LOG      ✓ Compiled in 437ms
+[09:59:54.525] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767290884615}
+[09:59:57.585] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/sign-in color: rgb(120, 120, 120) color: inherit {"dp":"/sign-in","o":"http://localhost:3000/sign-in","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767290888569}
+[10:01:28.766] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767290979276}
+[10:03:37.750] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767291107396}
+[10:04:10.794] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/sign-in color: rgb(120, 120, 120) color: inherit {"dp":"/sign-in","o":"http://localhost:3000/sign-in","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767291141782}
+[10:04:16.548] Server  LOG      ✓ Compiled in 16.5s
+[10:04:29.664] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/tutor color: rgb(120, 120, 120) color: inherit {"dp":"/tutor","o":"http://localhost:3000/tutor","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767291160643}
+[10:04:40.640] Server  LOG      ○ Compiling /tutor/courses/[courseId]/edit ...
+[10:05:55.770] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/tutor/courses/6/edit color: rgb(120, 120, 120) color: inherit {"dp":"/tutor/courses/[courseId]/edit","o":"http://localhost:3000/tutor/courses/6/edit","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767291245792}
+[10:29:43.051] Server  LOG      ○ Compiling /tutor/courses/[courseId] ...
+[10:30:00.025] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/tutor/courses/6 color: rgb(120, 120, 120) color: inherit {"dp":"/tutor/courses/[courseId]","o":"http://localhost:3000/tutor/courses/6","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767292690967}
+[10:30:07.917] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767292697660}
+[10:30:12.618] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/sign-in color: rgb(120, 120, 120) color: inherit {"dp":"/sign-in","o":"http://localhost:3000/sign-in","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767292703585}
+[10:30:31.353] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767292722315}
+[10:30:51.678] Server  LOG      ○ Compiling /courses/[courseId] ...
+[10:31:22.554] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/courses/6 color: rgb(120, 120, 120) color: inherit {"dp":"/courses/[courseId]","o":"http://localhost:3000/courses/6","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767292773516}
+[10:58:37.131] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767294408063}
+[10:59:02.509] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767294432799}
+[10:59:09.016] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/sign-in color: rgb(120, 120, 120) color: inherit {"dp":"/sign-in","o":"http://localhost:3000/sign-in","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767294439952}
+[10:59:28.510] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767294459446}
+[11:03:22.428] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/courses/6 color: rgb(120, 120, 120) color: inherit {"dp":"/courses/[courseId]","o":"http://localhost:3000/courses/6","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767294693349}
+[11:03:40.925] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\.next\dev\server\chunks\ssr\node_modules_829d0694._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[11:03:41.014] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\.next\dev\server\chunks\ssr\[root-of-the-server]__ec8b52a1._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[11:03:41.632] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[11:03:41.666] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\.next\dev\server\chunks\ssr\node_modules_04d5a0b8._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[11:03:41.712] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[11:03:41.734] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[11:03:41.736] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[11:03:41.737] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[11:03:41.748] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[11:03:41.771] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[11:03:41.797] Server  ERROR   [v0] Enrollment error: Error: NEXT_REDIRECT
+[11:07:52.074] Server  LOG      ○ Compiling /courses/[courseId]/lessons/[lessonId] ...
+[11:08:16.083] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/courses/6/lessons/5 color: rgb(120, 120, 120) color: inherit {"dp":"/courses/[courseId]/lessons/[lessonId]","o":"http://localhost:3000/courses/6/lessons/5","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767294987015}
+[11:21:56.538] Server  LOG      ✓ Compiled in 3.8s
+[11:22:43.634] Server  LOG      ✓ Compiled in 999ms
+[11:22:56.865] Server  LOG      ✓ Compiled in 452ms
+[11:26:04.276] Server  LOG      ✓ Compiled in 965ms
+[11:27:49.892] Server  LOG      ✓ Compiled in 19s
+[11:28:00.740] Server  LOG      ✓ Compiled in 431ms
+[11:28:12.628] Server  LOG      ✓ Compiled in 1460ms
+[11:30:51.078] Server  LOG      ✓ Compiled in 789ms
+[11:40:14.276] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/courses/6/lessons/6 color: rgb(120, 120, 120) color: inherit {"dp":"/courses/[courseId]/lessons/[lessonId]","o":"http://localhost:3000/courses/6/lessons/6","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767296905202}
+[11:45:02.614] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/courses/6/lessons/5 color: rgb(120, 120, 120) color: inherit {"dp":"/courses/[courseId]/lessons/[lessonId]","o":"http://localhost:3000/courses/6/lessons/5","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767297193529}
+[11:45:04.627] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/courses/6 color: rgb(120, 120, 120) color: inherit {"dp":"/courses/[courseId]","o":"http://localhost:3000/courses/6","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767297195528}
+[11:47:28.174] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/courses/6/lessons/5 color: rgb(120, 120, 120) color: inherit {"dp":"/courses/[courseId]/lessons/[lessonId]","o":"http://localhost:3000/courses/6/lessons/5","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767297338711}
+[11:48:01.802] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/courses/6/lessons/6 color: rgb(120, 120, 120) color: inherit {"dp":"/courses/[courseId]/lessons/[lessonId]","o":"http://localhost:3000/courses/6/lessons/6","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767297372615}
+[11:48:31.901] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/courses/6/lessons/7 color: rgb(120, 120, 120) color: inherit {"dp":"/courses/[courseId]/lessons/[lessonId]","o":"http://localhost:3000/courses/6/lessons/7","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767297402806}
+[11:50:58.067] Server  LOG      ○ Compiling /courses/[courseId]/lessons/[lessonId] ...
+[11:51:09.583] Server  LOG      ✓ Compiled in 39.1s
+[11:51:16.324] Server  LOG      ✓ Compiled in 4.8s
+[12:00:21.110] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/courses/6/lessons/8 color: rgb(120, 120, 120) color: inherit {"dp":"/courses/[courseId]/lessons/[lessonId]","o":"http://localhost:3000/courses/6/lessons/8","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767298112012}
+[12:11:05.348] Server  LOG      ✓ Compiled in 18.3s
+[12:11:23.970] Server  LOG      ✓ Compiled in 620ms
+[12:14:13.460] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\.next\dev\server\chunks\ssr\node_modules_7215cfc9._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[12:14:13.803] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\.next\dev\server\chunks\ssr\[root-of-the-server]__81a88430._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[12:14:13.910] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\node_modules\next\dist\compiled\next-server\app-page-turbo.runtime.dev.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[12:14:14.096] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\.next\dev\server\chunks\ssr\node_modules_b853ed2a._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[12:14:14.402] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[12:14:14.516] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[12:14:14.551] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[12:14:14.587] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[12:14:14.588] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\node_modules\next\dist\server\lib\router-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[12:14:14.612] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\node_modules\next\dist\server\lib\start-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[12:14:14.838] Server  ERROR   [v0] Complete lesson error: NeonDbError: could not determine data type of parameter $2
+[12:15:26.610] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/courses/6/lessons/7 color: rgb(120, 120, 120) color: inherit {"dp":"/courses/[courseId]/lessons/[lessonId]","o":"http://localhost:3000/courses/6/lessons/7","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767299017526}
+[12:15:47.316] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/courses/6/lessons/8 color: rgb(120, 120, 120) color: inherit {"dp":"/courses/[courseId]/lessons/[lessonId]","o":"http://localhost:3000/courses/6/lessons/8","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767299038232}
+[12:15:53.782] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/courses/6/lessons/9 color: rgb(120, 120, 120) color: inherit {"dp":"/courses/[courseId]/lessons/[lessonId]","o":"http://localhost:3000/courses/6/lessons/9","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767299044683}
+[12:16:20.428] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/courses/6/lessons/8 color: rgb(120, 120, 120) color: inherit {"dp":"/courses/[courseId]/lessons/[lessonId]","o":"http://localhost:3000/courses/6/lessons/8","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767299071337}
+[12:16:34.740] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/courses/6/lessons/7 color: rgb(120, 120, 120) color: inherit {"dp":"/courses/[courseId]/lessons/[lessonId]","o":"http://localhost:3000/courses/6/lessons/7","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767299085652}
+[12:17:15.066] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/courses/6/lessons/8 color: rgb(120, 120, 120) color: inherit {"dp":"/courses/[courseId]/lessons/[lessonId]","o":"http://localhost:3000/courses/6/lessons/8","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767299125980}
+[12:21:36.672] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\.next\dev\server\chunks\ssr\node_modules_7215cfc9._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[12:21:36.711] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\.next\dev\server\chunks\ssr\[root-of-the-server]__28207fea._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[12:21:36.879] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\.next\dev\server\chunks\ssr\node_modules_7215cfc9._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[12:21:36.913] Server  ERROR   C:\Users\PC\Documents\NextJS Projects\gamified-learning-system\.next\dev\server\chunks\ssr\[root-of-the-server]__28207fea._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+[12:21:37.088] Server  ERROR    ⨯ NeonDbError: Error connecting to database: TypeError: fetch failed
+[12:21:42.215] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[12:21:47.843] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[12:21:47.843] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[12:21:47.843] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767299397186}
+[12:21:52.197] Browser ERROR   unhandledRejection: i: Failed to connect to MetaMask
+[12:24:17.763] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767299547700}
+[12:24:33.797] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/courses/6 color: rgb(120, 120, 120) color: inherit {"dp":"/courses/[courseId]","o":"http://localhost:3000/courses/6","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767299564707}
+[12:24:52.768] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/courses/6/lessons/9 color: rgb(120, 120, 120) color: inherit {"dp":"/courses/[courseId]/lessons/[lessonId]","o":"http://localhost:3000/courses/6/lessons/9","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767299583509}
+[12:28:57.649] Server  LOG      ✓ Compiled in 91.5s
+[12:28:58.616] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/courses/6/lessons/10 color: rgb(120, 120, 120) color: inherit {"dp":"/courses/[courseId]/lessons/[lessonId]","o":"http://localhost:3000/courses/6/lessons/10","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767299829524}
+[12:29:41.869] Server  LOG      ✓ Compiled in 1057ms
+[12:30:48.775] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/courses/6/lessons/11 color: rgb(120, 120, 120) color: inherit {"dp":"/courses/[courseId]/lessons/[lessonId]","o":"http://localhost:3000/courses/6/lessons/11","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767299938753}
+[12:33:50.013] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/courses/6/lessons/12 color: rgb(120, 120, 120) color: inherit {"dp":"/courses/[courseId]/lessons/[lessonId]","o":"http://localhost:3000/courses/6/lessons/12","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767300120926}
+[12:34:16.871] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/courses/6/lessons/13 color: rgb(120, 120, 120) color: inherit {"dp":"/courses/[courseId]/lessons/[lessonId]","o":"http://localhost:3000/courses/6/lessons/13","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767300147771}
+[12:34:23.761] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/courses/6/lessons/12 color: rgb(120, 120, 120) color: inherit {"dp":"/courses/[courseId]/lessons/[lessonId]","o":"http://localhost:3000/courses/6/lessons/12","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767300153717}
+[12:37:06.989] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[12:37:09.079] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[12:37:09.079] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[12:37:09.079] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767300319208}
+[12:37:21.983] Browser ERROR   unhandledRejection: i: Failed to connect to MetaMask
+[12:37:23.372] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3000/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767300334279}
+[12:37:47.239] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/leaderboard color: rgb(120, 120, 120) color: inherit {"dp":"/leaderboard","o":"http://localhost:3000/leaderboard","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1767300358140}
